@@ -1,22 +1,20 @@
 const userList = document.querySelector('#userList')
 const numberList = document.querySelector('#numberList')
 
-const renderFirstNames = (users) => {
+const renderUsers = (users) => {
     const html = users.map( (user) => {
         return `<tr><td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.email}</td>
         <td>${user.title}</td></tr>`;
     }).join('');
-    
     userList.innerHTML = html;
 }
 
 const renderNumbers = (count) => {
     let html = '';
     for (let i = 1; i <= (count/50); i++) {
-        html +=       
-        `<li>${i}<a href='#${i}'></li>`;
+        html += `<li>${i}<a href='#${i}'></li>`;
     }
     numberList.innerHTML = html;
 }
@@ -24,7 +22,7 @@ const renderNumbers = (count) => {
 fetch('https://acme-users-api-rev.herokuapp.com/api/users')
     .then(response => response.json())
     .then(result => {renderNumbers(result.count);
-        renderFirstNames(result.users);
+        renderUsers(result.users);
     })
     
 window.addEventListener('hashchange', (ev) => {
@@ -32,7 +30,7 @@ window.addEventListener('hashchange', (ev) => {
     //console.log(id);
     fetch(`https://acme-users-api-rev.herokuapp.com/api/users/${id}`)
         .then(response => response.json())
-        .then(result => renderFirstNames(result.users))
+        .then(result => renderUsers(result.users))
 })
 
     
