@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
 }
+
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;      
 }
 
 main {
@@ -11,21 +12,29 @@ main {
     width: 100%;
     flex-direction: row;
 }
+
 ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
 
 }
+
 div {
     display: flex;
     width: 40%;
 
 }
+
 table, th, td {
     border-top: 1px solid black;
     border-collapse: collapse;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+    width: 98%;
+    margin: 0 auto;
 }
 
 th {
