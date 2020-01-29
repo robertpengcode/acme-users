@@ -2,7 +2,7 @@
 const userList = document.querySelector('#userList')
 //const lastaNames = document.querySelector('#lastNames')
 
-
+const numberList = document.querySelector('#numberList')
 
 
 
@@ -33,13 +33,22 @@ const renderFirstNames = (users) => {
 
 const renderNumbers = () => {
 
-    const html = 
+    let html = '';
 
-    for (let i = 1; i <= 24; i++) {
+    for (let i = 0; i <= 23; i++) {
+
+        html +=
+        
+        `
+        <li>${i+1}
+            <a href='acme-users-api-rev.herokuapp.com/api/users/${i}'
+        </li>
+        
+        `
         
 
     }
-    return 
+    numberList.innerHTML = html;
 }
 
 
