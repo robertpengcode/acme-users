@@ -51,7 +51,7 @@ const renderNumbers = () => {
     numberList.innerHTML = html;
 }
 
-
+renderNumbers();
 
 
 

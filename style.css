@@ -13,6 +13,8 @@ main {
 }
 ul {
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 
 }
 div {
@@ -34,4 +36,9 @@ th {
 tr {
     height: 3rem;
     border-bottom: none;
+}
+
+li {
+    display: inline;
+    
 }
