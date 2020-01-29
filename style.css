@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+main {
+    /* display: flex; */
+    flex: wrap;
+    width: 100%;
+    flex-direction: row;
+}
+ul {
+    list-style-type: none;
+
+}
+div {
+    display: flex;
+    width: 40%;
+
+}
+table, th, td {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+th {
+    background-color: dodgerblue;
+    color: white;
+}
+
+tr {
+    height: 3rem;
+    border-bottom: none;
+}
