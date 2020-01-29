@@ -12,11 +12,12 @@ const renderUsers = (users) => {
 }
 
 const renderNumbers = (count) => {
-    let html = '';
-    for (let i = 1; i <= (count/50); i++) {
-        html += `<li>${i}<a href='#${i}'></li>`;
+    let html = [];
+    for (let i = 1; i <= (count/50 + 1); i++) {
+        html.push(`<li><a href='#${i-1}'>${i}</a></li>`);
     }
-    numberList.innerHTML = html;
+    console.log(html);
+    numberList.innerHTML = html.join('');
 }
 
 fetch('https://acme-users-api-rev.herokuapp.com/api/users')
@@ -25,9 +26,9 @@ fetch('https://acme-users-api-rev.herokuapp.com/api/users')
         renderUsers(result.users);
     })
     
-window.addEventListener('hashchange', (ev) => {
+window.addEventListener('hashchange', () => {
     const id = window.location.hash.slice(1);
-    //console.log(id);
+    console.log(id);
     fetch(`https://acme-users-api-rev.herokuapp.com/api/users/${id}`)
         .then(response => response.json())
         .then(result => renderUsers(result.users))
