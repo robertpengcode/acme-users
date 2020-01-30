@@ -6,13 +6,6 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;      
 }
 
-main {
-    /* display: flex; */
-    flex: wrap;
-    width: 100%;
-    flex-direction: row;
-}
-
 ul {
     list-style-type: none;
     display: flex;
@@ -20,10 +13,9 @@ ul {
 
 }
 
-div {
-    display: flex;
-    width: 40%;
-
+li {
+    display: inline;
+    
 }
 
 table, th, td {
@@ -47,7 +39,3 @@ tr {
     border-bottom: none;
 }
 
-li {
-    display: inline;
-    
-}
